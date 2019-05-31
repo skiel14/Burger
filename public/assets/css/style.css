@@ -1,19 +1,57 @@
+html {
+  min-height: 100%;
+}
+
+body {
+  background: url(../images/burger.png) fixed;
+  background-color: rgba(255, 166, 0, 0.603);
+  background-position: center;
+  background-size: contain;
+}
+
 #ordered, #devoured {
   margin: 0 auto;
 }
 
-/* .item {
-  text-align: left;
+#devoured td {
+  text-align: center;
   vertical-align: middle;
+  padding: 10px;
 }
-*/
+
+#addBurger {
+  margin: 10px;
+}
+
+.item {
+  font-weight:bold;
+}
+
+.jumbo {
+  text-align: center;
+  background-color: rgba(211, 211, 211, 0.90);
+  border: rgb(255, 166, 0) 5px solid;
+  border-radius: 20px;
+}
+
+.list {
+  background-color: rgba(211, 211, 211, 0.90);
+  border: rgb(255, 166, 0) 5px solid;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+h2, h3 {
+  margin: 10px auto;
+}
+
 .devourBTN {
   /* padding-bottom: 5px; */
   vertical-align: middle;
   padding: 10px;
 }
 
-td {
+#ordered td {
   text-align: left;
   vertical-align: middle;
   padding: 10px;

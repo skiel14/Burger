@@ -1,20 +1,22 @@
 <div class="container text-center">
-  <img src="/assets/images/burger.png" alt="burger" width="150px">
-  <img src="/assets/images/burger.png" alt="burger" width="150px">
-  <img src="/assets/images/burger.png" alt="burger" width="150px">
-  <h1>Burgers! Burgers! Burgers!</h1>
+  <div class="jumbotron jumbo">
+    <img src="/assets/images/burger.png" alt="burger" width="150px">
+    <h1 class="display-3">Burgers! Burgers! Burgers!</h1>
+    <hr class="my-4">
+    <p class="lead">Add burgers and keep track of those you devour!</p>
+  </div>
   <div class="row text-center">
-    <div class="col" id="">
+    <div class="col list">
       <h2>Burgers Ordered</h2>
       <table id="ordered">
         {{#each burger_data}}
         {{#unless this.devoured}}
         <tr>
-          <td class="item">{{this.id}}. {{this.burger_name}}</td>
+          <td class="item">{{this.burger_name}}</td>
           <td class="devourBTN">
             <form class="devourIt">
-              <input input type="hidden" class="burger_id" type="text" value={{this.id}}>
-              <button type="submit" class="btn btn-primary btn-lg">Devour it!</button>
+              <input type="hidden" class="burger_id" type="text" value={{this.id}}>
+              <button type="submit" class="btn btn-primary">Devour it!</button>
             </form>
           </td>
         </tr>
@@ -22,28 +24,28 @@
         {{/each}}
       </table>
     </div>
-    <div class="col" id="">
+    <div class="col list">
       <h2>Order History</h2>
       <table id="devoured">
         {{#each burger_data}}
         {{#if this.devoured}}
         <tr>
-          <td class="item">{{this.id}}. {{this.burger_name}}</td>
+          <td class="item">{{this.burger_name}}</td>
         </tr>
         {{/if}}
         {{/each}}
       </table>
     </div>
   </div>
-  <div class="row">
+  <div class="row list">
     <form style="margin: 0 auto" action="/burgers/create" method="POST">
       <fieldset>
         <div class="form-group text-center">
-          <label for="exampleTextarea">Example textarea</label>
-          <textarea class="form-control" name="burger_name" value="" id="" rows="3"></textarea>
+          <label class="form-control-label"><h3>Type in the burger name and click the "Submit" button!</h3></label>
+          <input type="text" class="form-control" name="burger_name">
         </div>
       </fieldset>
-      <button type="submit" class="btn btn-primary" id="">Submit</button>
+      <button type="submit" class="btn btn-primary" id="addBurger">Submit</button>
     </form>
   </div>
 </div>
