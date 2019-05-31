@@ -32,13 +32,15 @@ body {
   background-color: rgba(211, 211, 211, 0.90);
   border: rgb(255, 166, 0) 5px solid;
   border-radius: 20px;
+  margin: 10px;
 }
 
 .list {
   background-color: rgba(211, 211, 211, 0.90);
   border: rgb(255, 166, 0) 5px solid;
-  margin: 10px;
+  margin: 5px;
   border-radius: 20px;
+  /* width: 100%; */
 }
 
 h2, h3 {
